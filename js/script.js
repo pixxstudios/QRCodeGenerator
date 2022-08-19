@@ -20,6 +20,11 @@ function onGenerateSubmit(e) {
 
 const clearQR_UI = () => {
     qr.innerText = '';
+
+    const saveLink = document.getElementById('save-link');
+    if (saveLink) {
+        saveLink.remove();
+    }
 }
 
 const generateQRCode = (url, size) => {
